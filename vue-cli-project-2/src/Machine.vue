@@ -3,8 +3,7 @@
         <h1>Machine {{ name }}</h1>
         <h3 class="green" v-if="status">Status OK</h3>
         <h3 class="red" v-if="!status">Status KO</h3>
-
-        <h5>Last time ckecked {{ checkedAt.toLocaleString('fr-FR') }}</h5>
+        <h5>Last time checked {{ checkedAt.toLocaleString('fr-FR') }}</h5>
 
     </div>
 </template>
@@ -26,7 +25,7 @@
     font-weight: bold;
 }
 div{
-    border : 2px solid black;
+    border : 2px solid #145759;
     margin: auto;
     width: 50%;
     margin-top: 15px;
