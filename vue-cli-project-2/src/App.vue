@@ -3,9 +3,8 @@
         <img src="assets/logo.png">
         <h1>{{ msg }}</h1>
         <ul>
-            <button type="button" class="btn btn-primary"><router-link to="/machinelist" >Liste des machines</router-link></button>
-            <button type="button" class="btn btn-primary"><router-link to="/machinemap" >Voir la carte</router-link></button>
-            <button type="button" class="btn btn-primary"><router-link to="/machine" >Voir la machine</router-link></button>
+            <button type="button" class="btn btn-light"><router-link to="/machinelist" >Liste des machines</router-link></button>
+            <button type="button" class="btn btn-light"><router-link to="/machinemap" >Voir la carte</router-link></button>
         </ul>
         <router-view></router-view>
     </div>
@@ -24,6 +23,7 @@
 </script>
 
 <style scoped>
+
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
@@ -31,6 +31,11 @@
         text-align: center;
         color: #2c3e50;
         margin-top: 60px;
+    }
+
+
+    .btn {
+        font-size: 25px;
     }
 
     img {
