@@ -15,23 +15,29 @@
     import Machine from './Machine.vue';
 
     export default {
+      props :
+      ['machines'],
         components: {
             'machine': Machine
         },
         data() {
             return {
                 message: "Liste des machines",
-                machines: [{
-                    id: 1,
-                    name: 'What else ?',
-                    status: true,
-                    checkedAt: new Date(),
-                }, {
-                    id: 2,
-                    name: 'Broken',
-                    status: false,
-                    checkedAt: new Date(),
-                }]
+                // machines: [{
+                //     id: 1,
+                //     name: 'What else ?',
+                //     status: true,
+                //     checkedAt: new Date(),
+                //     latitude : 10,
+                //     longitude : 10,
+                // }, {
+                //     id: 2,
+                //     name: 'Broken',
+                //     status: false,
+                //     checkedAt: new Date(),
+                //     latitude : 11,
+                //     longitude : 9.6,
+                // }]
             }
         },
 

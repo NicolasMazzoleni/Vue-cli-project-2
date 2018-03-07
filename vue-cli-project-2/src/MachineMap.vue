@@ -1,25 +1,27 @@
 <template>
-  <div>
-    <h2>{{ message }}</h2>
-    <gmap-map
-      :center="{lat:45.747711 , lng:4.8241}"
-      :zoom="7"
-      style="width: 100%; height: 800px"
-    >
-    </gmap-map>
-  </div>
-
-
+  <gmap-map
+    :center="{lat: 5.0, lng: 25.0}"
+    :zoom="4"
+    style="width: auto; height: 500px"
+  >
+    <gmap-marker
+      v-for="machine in machines"
+      :key="machine.id"
+      :position="{lat: machine.latitude, lng: machine.longitude}"
+      :clickable="true"
+      :draggable="true"
+    ></gmap-marker>
+  </gmap-map>
 </template>
 
 <script>
     export default {
+      props: ['machines'],
         data () {
           return {
               message: "Carte des machines"
           }
         },
-
     }
 </script>
 

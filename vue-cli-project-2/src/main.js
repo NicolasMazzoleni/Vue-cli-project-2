@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import App from './App.vue'
 import Routes from './routes.js'
 Vue.use(VueRouter);
+
+
 import * as VueGoogleMaps from 'vue2-google-maps'
 Vue.use(VueGoogleMaps, {
   load: {

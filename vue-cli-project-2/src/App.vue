@@ -6,17 +6,34 @@
             <button type="button" class="btn btn-light"><router-link to="/machinelist" >Liste des machines</router-link></button>
             <button type="button" class="btn btn-light"><router-link to="/machinemap" >Voir la carte</router-link></button>
         </ul>
-        <router-view></router-view>
+      <router-view v-bind:machines="machines"></router-view>
     </div>
 
 </template>
 
 <script>
+
+
     export default {
-        name: 'app',
+      name: 'app',
         data() {
             return {
-                msg: 'Que voulez-vous faire?'
+                msg: 'Que voulez-vous faire?',
+              machines: [{
+                id: 1,
+                name: 'What else ?',
+                status: true,
+                checkedAt: new Date(),
+                latitude : 10,
+                longitude : 10,
+              }, {
+                id: 2,
+                name: 'Broken',
+                status: false,
+                checkedAt: new Date(),
+                latitude : 11,
+                longitude : 9.6,
+              }]
             }
         }
     }
