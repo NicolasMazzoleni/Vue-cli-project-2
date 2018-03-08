@@ -12,14 +12,14 @@
 </template>
 
 <script>
-
+  import axios from 'axios';
 
     export default {
       name: 'app',
-        data() {
-            return {
-                msg: 'Que voulez-vous faire?',
-              machines: [{
+      data() {
+        return {
+          msg: 'Que voulez-vous faire?',
+          machines: [/*{
                 id: 1,
                 name: 'What else ?',
                 status: true,
@@ -33,9 +33,22 @@
                 checkedAt: new Date(),
                 latitude : 11,
                 longitude : 9.6,
-              }]
-            }
+              }*/],
+          loading: false,
+          error: null
         }
+      },
+      created()
+      {
+        axios.get(`https://machine-api-campus.herokuapp.com/api/machines`)
+          .then(response => {
+            // JSON responses are automatically parsed.
+            this.machines = response.data
+          })
+          .catch(e => {
+            this.errors.push(e)
+          })
+      }
     }
 </script>
 

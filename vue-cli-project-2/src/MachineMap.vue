@@ -7,7 +7,7 @@
     <gmap-marker
       v-for="machine in machines"
       :key="machine.id"
-      :position="{lat: machine.latitude, lng: machine.longitude}"
+      :position="{lat: Number(machine.latitude), lng: Number(machine.longitude)}"
       :clickable="true"
       :draggable="true"
     ></gmap-marker>
